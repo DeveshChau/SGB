@@ -1,0 +1,52 @@
+<table style="border: 1px solid black;">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Token</th>
+        <th>tranche</th>
+        <th>ISIN</th>
+        <th>issueDate</th>
+        <th>exchange</th>
+        <th> symbol </th> 
+          <th> issuePrice </th> 
+          <th> interestRate </th> 
+          <th> cashFlow </th> 
+          <th> numberOfUnits </th> 
+          <th> period </th> 
+          <th> maturityDate </th> 
+          <th> askPrice </th> 
+          <th> calYield </th> 
+          <th> fairValue </th> 
+          <th> discountToFairValue </th> 
+          <th> goldPrice </th> 
+          <th> discountToGoldPrice </th> 
+          <th> remainingMaturity </th> 
+          <th> discountToGold </th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of obj | keyvalue; let i = index">
+        <td>{{ i }}</td>
+        <td>{{ item.key }}</td>
+        <td>{{ item.value.tranche }}</td>
+        <td>{{ item.value.ISIN }}</td>
+        <td>{{ item.value.issueDate }}</td>
+        <td>{{ item.value.exchange }}</td>
+        <td>{{ item.value.symbol }}</td>
+        <td>{{ item.value.issuePrice }}</td>
+        <td>{{ item.value.interestRate }}</td>
+        <td>{{ item.value.cashFlow }}</td>
+        <td>{{ item.value.numberOfUnits }}</td>
+        <td>{{ item.value.period }}</td>
+        <td>{{ item.value.maturityDate }}</td>
+        <td>{{ item.value.askPrice }}</td>
+        <td>{{ item.value.calYield | number:'1.2-4' }}</td>
+        <td>{{ item.value.fairValue | number:'1.2-4' }}</td>
+        <td>{{ item.value.discountToFairValue | number:'1.2-4' }}</td>
+        <td>{{ item.value.goldPrice }}</td>
+        <td>{{ item.value.discountToGoldPrice }}</td>
+        <td>{{ item.value.remainingMaturity }}</td>
+        <td>{{ item.value.discountToGold | number:'1.2-4' }}</td>
+      </tr>
+    </tbody>
+</table>
