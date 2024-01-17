@@ -8,7 +8,7 @@ export class WebsocketService {
   private socket$: WebSocketSubject<any>;
 
   constructor() {
-    this.socket$ = webSocket('ws://localhost:80'); // WebSocket server URL
+    this.socket$ = webSocket('ws://localhost:3000'); // WebSocket server URL
   }
 
   public send(message: any) {

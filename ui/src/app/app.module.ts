@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { WebsocketService } from './websocket.service';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { WebsocketService } from './websocket.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AgGridModule
   ],
   providers: [WebsocketService],
   bootstrap: [AppComponent]

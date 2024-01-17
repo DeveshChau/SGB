@@ -24,9 +24,8 @@ const EXCHANGES = {
 	ncx_fo: 7,
 	cde_fo: 13,
 };
-
-const DEFAULT = {
-	"800251": {
+const DEFAULT = [
+	{ "token": "800251",
 	  "tranche": "2015-I",
 	  "ISIN": "IN0020150085",
 	  "issueDate": "November 30, 2015",
@@ -46,7 +45,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800252": {
+	{ "token": "800252",
 	  "tranche": "2016-I",
 	  "ISIN": "IN0020150101",
 	  "issueDate": "February 8, 2016",
@@ -66,7 +65,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800253": {
+	{ "token": "800253",
 	  "tranche": "2016-II",
 	  "ISIN": "IN0020150119",
 	  "issueDate": "March 29, 2016",
@@ -86,7 +85,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800254": {
+	{ "token": "800254",
 	  "tranche": "2016-17 Series I",
 	  "ISIN": "IN0020160027",
 	  "issueDate": "August 5, 2016",
@@ -106,7 +105,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800258": {
+	{ "token": "800258",
 	  "tranche": "2016-17 Series II",
 	  "ISIN": "IN0020160043",
 	  "issueDate": "September 30, 2016",
@@ -126,7 +125,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800259": {
+	{ "token": "800259",
 	  "tranche": "2016-17 Series III",
 	  "ISIN": "IN0020160076",
 	  "issueDate": "November 17, 2016",
@@ -146,7 +145,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800265": {
+	{ "token": "800265",
 	  "tranche": "2016-17 Series IV",
 	  "ISIN": "IN0020160126",
 	  "issueDate": "March 17, 2017",
@@ -166,7 +165,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800268": {
+	{ "token": "800268",
 	  "tranche": "2017-18 Series I",
 	  "ISIN": "IN0020170018",
 	  "issueDate": "May 12, 2017",
@@ -186,7 +185,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800269": {
+	{ "token": "800269",
 	  "tranche": "2017-18 Series II",
 	  "ISIN": "IN0020170034",
 	  "issueDate": "July 28, 2017",
@@ -206,7 +205,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800270": {
+	{ "token": "800270",
 	  "tranche": "2017-18 Series III",
 	  "ISIN": "IN0020170059",
 	  "issueDate": "October 16, 2017",
@@ -226,7 +225,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800271": {
+	{ "token": "800271",
 	  "tranche": "2017-18 Series IV",
 	  "ISIN": "IN0020170067",
 	  "issueDate": "October 23, 2017",
@@ -246,7 +245,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800273": {
+	{ "token": "800273",
 	  "tranche": "2017-18 Series V",
 	  "ISIN": "IN0020170075",
 	  "issueDate": "October 30, 2017",
@@ -266,7 +265,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800274": {
+	{ "token": "800274",
 	  "tranche": "2017-18 Series VI",
 	  "ISIN": "IN0020170083",
 	  "issueDate": "November 6, 2017",
@@ -286,7 +285,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800275": {
+	{ "token": "800275",
 	  "tranche": "2017-18 Series VII",
 	  "ISIN": "IN0020170091",
 	  "issueDate": "November 13, 2017",
@@ -306,7 +305,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800276": {
+	{ "token": "800276",
 	  "tranche": "2017-18 Series VIII",
 	  "ISIN": "IN0020170109",
 	  "issueDate": "November 20, 2017",
@@ -326,7 +325,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800277": {
+	{ "token": "800277",
 	  "tranche": "2017-18 Series IX",
 	  "ISIN": "IN0020170117",
 	  "issueDate": "November 27, 2017",
@@ -346,7 +345,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800278": {
+	{ "token": "800278",
 	  "tranche": "2017-18 Series X",
 	  "ISIN": "IN0020170125",
 	  "issueDate": "December 4, 2017",
@@ -366,7 +365,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800279": {
+	{ "token": "800279",
 	  "tranche": "2017-18 Series XI",
 	  "ISIN": "IN0020170133",
 	  "issueDate": "December 11, 2017",
@@ -386,7 +385,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800280": {
+	{ "token": "800280",
 	  "tranche": "2017-18 Series XII",
 	  "ISIN": "IN0020170141",
 	  "issueDate": "December 18, 2017",
@@ -406,7 +405,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800281": {
+	{ "token": "800281",
 	  "tranche": "2017-18 Series XIII",
 	  "ISIN": "IN0020170158",
 	  "issueDate": "December 26, 2017",
@@ -426,7 +425,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800282": {
+	{ "token": "800282",
 	  "tranche": "2017-18 Series XIV",
 	  "ISIN": "IN0020170166",
 	  "issueDate": "January 1, 2018",
@@ -446,7 +445,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800287": {
+	{ "token": "800287",
 	  "tranche": "2018-19 Series I",
 	  "ISIN": "IN0020180033",
 	  "issueDate": "May 4, 2018",
@@ -466,7 +465,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800288": {
+	{ "token": "800288",
 	  "tranche": "2018-19 Series II",
 	  "ISIN": "IN0020180249",
 	  "issueDate": "October 23, 2018",
@@ -486,7 +485,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800289": {
+	{ "token": "800289",
 	  "tranche": "2018-19 Series III",
 	  "ISIN": "IN0020180314",
 	  "issueDate": "November 13, 2018",
@@ -506,7 +505,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800290": {
+	{ "token": "800290",
 	  "tranche": "2018-19 Series IV",
 	  "ISIN": "IN0020180389",
 	  "issueDate": "January 1, 2019",
@@ -526,7 +525,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800291": {
+	{ "token": "800291",
 	  "tranche": "2018-19 Series V",
 	  "ISIN": "IN0020180462",
 	  "issueDate": "January 22, 2019",
@@ -546,7 +545,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800292": {
+	{ "token": "800292",
 	  "tranche": "2018-19 Series VI",
 	  "ISIN": "IN0020180561",
 	  "issueDate": "February 12, 2019",
@@ -566,7 +565,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800295": {
+	{ "token": "800295",
 	  "tranche": "2019-20 Series I",
 	  "ISIN": "IN0020190073",
 	  "issueDate": "June 11, 2019",
@@ -586,7 +585,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800296": {
+	{ "token": "800296",
 	  "tranche": "2019-20 Series II",
 	  "ISIN": "IN0020190081",
 	  "issueDate": "July 16, 2019",
@@ -606,7 +605,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800297": {
+	{ "token": "800297",
 	  "tranche": "2019-20 Series III",
 	  "ISIN": "IN0020190107",
 	  "issueDate": "August 14, 2019",
@@ -626,7 +625,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800301": {
+	{ "token": "800301",
 	  "tranche": "2019-20 Series IV",
 	  "ISIN": "IN0020190115",
 	  "issueDate": "September 17, 2019",
@@ -646,7 +645,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800302": {
+	{ "token": "800302",
 	  "tranche": "2019-20 Series V",
 	  "ISIN": "IN0020190370",
 	  "issueDate": "October 15, 2019",
@@ -666,7 +665,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800303": {
+	{ "token": "800303",
 	  "tranche": "2019-20 Series VI",
 	  "ISIN": "IN0020190388",
 	  "issueDate": "October 30, 2019",
@@ -686,7 +685,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800312": {
+	{ "token": "800312",
 	  "tranche": "2019-20 Series VII",
 	  "ISIN": "IN0020190461",
 	  "issueDate": "December 10, 2019",
@@ -706,7 +705,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800313": {
+	{ "token": "800313",
 	  "tranche": "2019-20 Series VIII",
 	  "ISIN": "IN0020190537",
 	  "issueDate": "January 21, 2020",
@@ -726,7 +725,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800314": {
+	{ "token": "800314",
 	  "tranche": "2019-20 Series IX",
 	  "ISIN": "IN0020190545",
 	  "issueDate": "February 11, 2020",
@@ -746,7 +745,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800315": {
+	{ "token": "800315",
 	  "tranche": "2019-20 Series X",
 	  "ISIN": "IN0020190552",
 	  "issueDate": "March 11, 2020",
@@ -766,7 +765,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800318": {
+	{ "token": "800318",
 	  "tranche": "2020-21, Series I",
 	  "ISIN": "IN0020200062",
 	  "issueDate": "April 28, 2020",
@@ -786,7 +785,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800320": {
+	{ "token": "800320",
 	  "tranche": "2020-21, Series II",
 	  "ISIN": "IN0020200088",
 	  "issueDate": "May 19, 2020",
@@ -806,7 +805,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800322": {
+	{ "token": "800322",
 	  "tranche": "2020-21, Series III",
 	  "ISIN": "IN0020200104",
 	  "issueDate": "June 16, 2020",
@@ -826,7 +825,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800324": {
+	{ "token": "800324",
 	  "tranche": "2020-21, Series IV",
 	  "ISIN": "IN0020200146",
 	  "issueDate": "July 14, 2020",
@@ -846,7 +845,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800325": {
+	{ "token": "800325",
 	  "tranche": "2020-21, Series V",
 	  "ISIN": "IN0020200161",
 	  "issueDate": "August 11, 2020",
@@ -866,7 +865,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800327": {
+	{ "token": "800327",
 	  "tranche": "2020-21, Series VI",
 	  "ISIN": "IN0020200195",
 	  "issueDate": "September 8, 2020",
@@ -886,7 +885,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800328": {
+	{ "token": "800328",
 	  "tranche": "2020-21, Series VII",
 	  "ISIN": "IN0020200203",
 	  "issueDate": "October 20, 2020",
@@ -906,7 +905,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800329": {
+	{ "token": "800329",
 	  "tranche": "2020-21, Series VIII",
 	  "ISIN": "IN0020200286",
 	  "issueDate": "November 18, 2020",
@@ -926,7 +925,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800331": {
+	{ "token": "800331",
 	  "tranche": "2020-21, Series IX",
 	  "ISIN": "IN0020200377",
 	  "issueDate": "January 5, 2021",
@@ -946,7 +945,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800332": {
+	{ "token": "800332",
 	  "tranche": "2020-21, Series X",
 	  "ISIN": "IN0020200385",
 	  "issueDate": "January 19, 2021",
@@ -966,7 +965,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800333": {
+	{ "token": "800333",
 	  "tranche": "2020-21, Series XI",
 	  "ISIN": "IN0020200393",
 	  "issueDate": "February 9, 2021",
@@ -986,7 +985,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800339": {
+	{ "token": "800339",
 	  "tranche": "2020-21, Series XII",
 	  "ISIN": "IN0020200427",
 	  "issueDate": "March 9, 2021",
@@ -1006,7 +1005,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800340": {
+	{ "token": "800340",
 	  "tranche": "2021-22, Series I",
 	  "ISIN": "IN0020210053",
 	  "issueDate": "May 25, 2021",
@@ -1026,7 +1025,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800341": {
+	{ "token": "800341",
 	  "tranche": "2021-22, Series II",
 	  "ISIN": "IN0020210061",
 	  "issueDate": "June 1, 2021",
@@ -1046,7 +1045,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800342": {
+	{ "token": "800342",
 	  "tranche": "2021-22, Series III",
 	  "ISIN": "IN0020210087",
 	  "issueDate": "June 8, 2021",
@@ -1066,7 +1065,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800367": {
+	{ "token": "800367",
 	  "tranche": "2021-22, Series IV",
 	  "ISIN": "IN0020210111",
 	  "issueDate": "July 20, 2021",
@@ -1086,7 +1085,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800385": {
+	{ "token": "800385",
 	  "tranche": "2021-22, Series V",
 	  "ISIN": "IN0020210129",
 	  "issueDate": "August 17, 2021",
@@ -1106,7 +1105,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800386": {
+	{ "token": "800386",
 	  "tranche": "2021-22, Series VI",
 	  "ISIN": "IN0020210145",
 	  "issueDate": "September 7, 2021",
@@ -1126,7 +1125,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800434": {
+	{ "token": "800434",
 	  "tranche": "2021-22, Series VII",
 	  "ISIN": "IN0020210178",
 	  "issueDate": "November 2, 2021",
@@ -1146,7 +1145,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800437": {
+	{ "token": "800437",
 	  "tranche": "2021-22, Series VIII",
 	  "ISIN": "IN0020210228",
 	  "issueDate": "December 7, 2021",
@@ -1166,7 +1165,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800438": {
+	{ "token": "800438",
 	  "tranche": "2021-22, Series IX",
 	  "ISIN": "IN0020210236",
 	  "issueDate": "January 18, 2022",
@@ -1186,7 +1185,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800439": {
+	{ "token": "800439",
 	  "tranche": "2021-22, Series X",
 	  "ISIN": "IN0020210319",
 	  "issueDate": "March 8, 2022",
@@ -1206,7 +1205,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800443": {
+	{ "token": "800443",
 	  "tranche": "2022-23, Series I",
 	  "ISIN": "IN0020220045",
 	  "issueDate": "June 28, 2022",
@@ -1226,7 +1225,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800488": {
+	{ "token": "800488",
 	  "tranche": "2022-23, Series II",
 	  "ISIN": "IN0020220078",
 	  "issueDate": "August 30, 2022",
@@ -1246,7 +1245,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800573": {
+	{ "token": "800573",
 	  "tranche": "2022-23, Series III",
 	  "ISIN": "IN0020220110",
 	  "issueDate": "December 27, 2022",
@@ -1266,7 +1265,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800575": {
+	{ "token": "800575",
 	  "tranche": "2022-23, Series IV",
 	  "ISIN": "IN0020220169",
 	  "issueDate": "March 14, 2023",
@@ -1286,7 +1285,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800580": {
+	{ "token": "800580",
 	  "tranche": "2023-24, Series I",
 	  "ISIN": "IN0020230069",
 	  "issueDate": "June 27, 2023",
@@ -1306,7 +1305,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"800596": {
+	{ "token": "800596",
 	  "tranche": "2023-24, Series II",
 	  "ISIN": "IN0020230093",
 	  "issueDate": "September 20, 2023",
@@ -1326,7 +1325,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"17248": {
+	{ "token": "17248",
 	  "tranche": "2015-I",
 	  "ISIN": "IN0020150085",
 	  "issueDate": "November 30, 2015",
@@ -1346,7 +1345,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"18385": {
+	{ "token": "18385",
 	  "tranche": "2016-I",
 	  "ISIN": "IN0020150101",
 	  "issueDate": "February 8, 2016",
@@ -1366,7 +1365,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"18386": {
+	{ "token": "18386",
 	  "tranche": "2016-II",
 	  "ISIN": "IN0020150119",
 	  "issueDate": "March 29, 2016",
@@ -1386,7 +1385,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"18429": {
+	{ "token": "18429",
 	  "tranche": "2016-17 Series I",
 	  "ISIN": "IN0020160027",
 	  "issueDate": "August 5, 2016",
@@ -1406,7 +1405,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"18795": {
+	{ "token": "18795",
 	  "tranche": "2016-17 Series II",
 	  "ISIN": "IN0020160043",
 	  "issueDate": "September 30, 2016",
@@ -1426,7 +1425,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"19203": {
+	{ "token": "19203",
 	  "tranche": "2016-17 Series III",
 	  "ISIN": "IN0020160076",
 	  "issueDate": "November 17, 2016",
@@ -1446,7 +1445,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"20467": {
+	{ "token": "20467",
 	  "tranche": "2016-17 Series IV",
 	  "ISIN": "IN0020160126",
 	  "issueDate": "March 17, 2017",
@@ -1466,7 +1465,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"20980": {
+	{ "token": "20980",
 	  "tranche": "2017-18 Series I",
 	  "ISIN": "IN0020170018",
 	  "issueDate": "May 12, 2017",
@@ -1486,7 +1485,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"21477": {
+	{ "token": "21477",
 	  "tranche": "2017-18 Series II",
 	  "ISIN": "IN0020170034",
 	  "issueDate": "July 28, 2017",
@@ -1506,7 +1505,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"250": {
+	{ "token": "250",
 	  "tranche": "2017-18 Series III",
 	  "ISIN": "IN0020170059",
 	  "issueDate": "October 16, 2017",
@@ -1526,7 +1525,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"304": {
+	{ "token": "304",
 	  "tranche": "2017-18 Series IV",
 	  "ISIN": "IN0020170067",
 	  "issueDate": "October 23, 2017",
@@ -1546,7 +1545,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"355": {
+	{ "token": "355",
 	  "tranche": "2017-18 Series V",
 	  "ISIN": "IN0020170075",
 	  "issueDate": "October 30, 2017",
@@ -1566,7 +1565,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"398": {
+	{ "token": "398",
 	  "tranche": "2017-18 Series VI",
 	  "ISIN": "IN0020170083",
 	  "issueDate": "November 6, 2017",
@@ -1586,7 +1585,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"458": {
+	{ "token": "458",
 	  "tranche": "2017-18 Series VII",
 	  "ISIN": "IN0020170091",
 	  "issueDate": "November 13, 2017",
@@ -1606,7 +1605,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"497": {
+	{ "token": "497",
 	  "tranche": "2017-18 Series VIII",
 	  "ISIN": "IN0020170109",
 	  "issueDate": "November 20, 2017",
@@ -1626,7 +1625,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"540": {
+	{ "token": "540",
 	  "tranche": "2017-18 Series IX",
 	  "ISIN": "IN0020170117",
 	  "issueDate": "November 27, 2017",
@@ -1646,7 +1645,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"623": {
+	{ "token": "623",
 	  "tranche": "2017-18 Series X",
 	  "ISIN": "IN0020170125",
 	  "issueDate": "December 4, 2017",
@@ -1666,7 +1665,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"729": {
+	{ "token": "729",
 	  "tranche": "2017-18 Series XI",
 	  "ISIN": "IN0020170133",
 	  "issueDate": "December 11, 2017",
@@ -1686,7 +1685,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"795": {
+	{ "token": "795",
 	  "tranche": "2017-18 Series XII",
 	  "ISIN": "IN0020170141",
 	  "issueDate": "December 18, 2017",
@@ -1706,7 +1705,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"862": {
+	{ "token": "862",
 	  "tranche": "2017-18 Series XIII",
 	  "ISIN": "IN0020170158",
 	  "issueDate": "December 26, 2017",
@@ -1726,7 +1725,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"945": {
+	{ "token": "945",
 	  "tranche": "2017-18 Series XIV",
 	  "ISIN": "IN0020170166",
 	  "issueDate": "January 1, 2018",
@@ -1746,7 +1745,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"2891": {
+	{ "token": "2891",
 	  "tranche": "2018-19 Series I",
 	  "ISIN": "IN0020180033",
 	  "issueDate": "May 4, 2018",
@@ -1766,7 +1765,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"5960": {
+	{ "token": "5960",
 	  "tranche": "2018-19 Series II",
 	  "ISIN": "IN0020180249",
 	  "issueDate": "October 23, 2018",
@@ -1786,7 +1785,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"6355": {
+	{ "token": "6355",
 	  "tranche": "2018-19 Series III",
 	  "ISIN": "IN0020180314",
 	  "issueDate": "November 13, 2018",
@@ -1806,7 +1805,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"7654": {
+	{ "token": "7654",
 	  "tranche": "2018-19 Series IV",
 	  "ISIN": "IN0020180389",
 	  "issueDate": "January 1, 2019",
@@ -1826,7 +1825,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"8308": {
+	{ "token": "8308",
 	  "tranche": "2018-19 Series V",
 	  "ISIN": "IN0020180462",
 	  "issueDate": "January 22, 2019",
@@ -1846,7 +1845,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"8766": {
+	{ "token": "8766",
 	  "tranche": "2018-19 Series VI",
 	  "ISIN": "IN0020180561",
 	  "issueDate": "February 12, 2019",
@@ -1866,7 +1865,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"10261": {
+	{ "token": "10261",
 	  "tranche": "2019-20 Series I",
 	  "ISIN": "IN0020190073",
 	  "issueDate": "June 11, 2019",
@@ -1886,7 +1885,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"11154": {
+	{ "token": "11154",
 	  "tranche": "2019-20 Series II",
 	  "ISIN": "IN0020190081",
 	  "issueDate": "July 16, 2019",
@@ -1906,7 +1905,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"12904": {
+	{ "token": "12904",
 	  "tranche": "2019-20 Series III",
 	  "ISIN": "IN0020190107",
 	  "issueDate": "August 14, 2019",
@@ -1926,7 +1925,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"13209": {
+	{ "token": "13209",
 	  "tranche": "2019-20 Series IV",
 	  "ISIN": "IN0020190115",
 	  "issueDate": "September 17, 2019",
@@ -1946,7 +1945,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"13981": {
+	{ "token": "13981",
 	  "tranche": "2019-20 Series V",
 	  "ISIN": "IN0020190370",
 	  "issueDate": "October 15, 2019",
@@ -1966,7 +1965,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"14252": {
+	{ "token": "14252",
 	  "tranche": "2019-20 Series VI",
 	  "ISIN": "IN0020190388",
 	  "issueDate": "October 30, 2019",
@@ -1986,7 +1985,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"15432": {
+	{ "token": "15432",
 	  "tranche": "2019-20 Series VII",
 	  "ISIN": "IN0020190461",
 	  "issueDate": "December 10, 2019",
@@ -2006,7 +2005,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"17110": {
+	{ "token": "17110",
 	  "tranche": "2019-20 Series VIII",
 	  "ISIN": "IN0020190537",
 	  "issueDate": "January 21, 2020",
@@ -2026,7 +2025,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"17664": {
+	{ "token": "17664",
 	  "tranche": "2019-20 Series IX",
 	  "ISIN": "IN0020190545",
 	  "issueDate": "February 11, 2020",
@@ -2046,7 +2045,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"18451": {
+	{ "token": "18451",
 	  "tranche": "2019-20 Series X",
 	  "ISIN": "IN0020190552",
 	  "issueDate": "March 11, 2020",
@@ -2066,7 +2065,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"18862": {
+	{ "token": "18862",
 	  "tranche": "2020-21, Series I",
 	  "ISIN": "IN0020200062",
 	  "issueDate": "April 28, 2020",
@@ -2086,7 +2085,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"18972": {
+	{ "token": "18972",
 	  "tranche": "2020-21, Series II",
 	  "ISIN": "IN0020200088",
 	  "issueDate": "May 19, 2020",
@@ -2106,7 +2105,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"19078": {
+	{ "token": "19078",
 	  "tranche": "2020-21, Series III",
 	  "ISIN": "IN0020200104",
 	  "issueDate": "June 16, 2020",
@@ -2126,7 +2125,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"22242": {
+	{ "token": "22242",
 	  "tranche": "2020-21, Series IV",
 	  "ISIN": "IN0020200146",
 	  "issueDate": "July 14, 2020",
@@ -2146,7 +2145,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"22385": {
+	{ "token": "22385",
 	  "tranche": "2020-21, Series V",
 	  "ISIN": "IN0020200161",
 	  "issueDate": "August 11, 2020",
@@ -2166,7 +2165,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"149": {
+	{ "token": "149",
 	  "tranche": "2020-21, Series VI",
 	  "ISIN": "IN0020200195",
 	  "issueDate": "September 8, 2020",
@@ -2186,7 +2185,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"834": {
+	{ "token": "834",
 	  "tranche": "2020-21, Series VII",
 	  "ISIN": "IN0020200203",
 	  "issueDate": "October 20, 2020",
@@ -2206,7 +2205,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"1342": {
+	{ "token": "1342",
 	  "tranche": "2020-21, Series VIII",
 	  "ISIN": "IN0020200286",
 	  "issueDate": "November 18, 2020",
@@ -2226,7 +2225,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"1920": {
+	{ "token": "1920",
 	  "tranche": "2020-21, Series IX",
 	  "ISIN": "IN0020200377",
 	  "issueDate": "January 5, 2021",
@@ -2246,7 +2245,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"2003": {
+	{ "token": "2003",
 	  "tranche": "2020-21, Series X",
 	  "ISIN": "IN0020200385",
 	  "issueDate": "January 19, 2021",
@@ -2266,7 +2265,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"2200": {
+	{ "token": "2200",
 	  "tranche": "2020-21, Series XI",
 	  "ISIN": "IN0020200393",
 	  "issueDate": "February 9, 2021",
@@ -2286,7 +2285,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"2810": {
+	{ "token": "2810",
 	  "tranche": "2020-21, Series XII",
 	  "ISIN": "IN0020200427",
 	  "issueDate": "March 9, 2021",
@@ -2306,7 +2305,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"3742": {
+	{ "token": "3742",
 	  "tranche": "2021-22, Series I",
 	  "ISIN": "IN0020210053",
 	  "issueDate": "May 25, 2021",
@@ -2326,7 +2325,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"3743": {
+	{ "token": "3743",
 	  "tranche": "2021-22, Series II",
 	  "ISIN": "IN0020210061",
 	  "issueDate": "June 1, 2021",
@@ -2346,7 +2345,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"3800": {
+	{ "token": "3800",
 	  "tranche": "2021-22, Series III",
 	  "ISIN": "IN0020210087",
 	  "issueDate": "June 8, 2021",
@@ -2366,7 +2365,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"5113": {
+	{ "token": "5113",
 	  "tranche": "2021-22, Series IV",
 	  "ISIN": "IN0020210111",
 	  "issueDate": "July 20, 2021",
@@ -2386,7 +2385,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"5455": {
+	{ "token": "5455",
 	  "tranche": "2021-22, Series V",
 	  "ISIN": "IN0020210129",
 	  "issueDate": "August 17, 2021",
@@ -2406,7 +2405,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"5575": {
+	{ "token": "5575",
 	  "tranche": "2021-22, Series VI",
 	  "ISIN": "IN0020210145",
 	  "issueDate": "September 7, 2021",
@@ -2426,7 +2425,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"6518": {
+	{ "token": "6518",
 	  "tranche": "2021-22, Series VII",
 	  "ISIN": "IN0020210178",
 	  "issueDate": "November 2, 2021",
@@ -2446,7 +2445,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"7098": {
+	{ "token": "7098",
 	  "tranche": "2021-22, Series VIII",
 	  "ISIN": "IN0020210228",
 	  "issueDate": "December 7, 2021",
@@ -2466,7 +2465,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"7879": {
+	{ "token": "7879",
 	  "tranche": "2021-22, Series IX",
 	  "ISIN": "IN0020210236",
 	  "issueDate": "January 18, 2022",
@@ -2486,7 +2485,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"8401": {
+	{ "token": "8401",
 	  "tranche": "2021-22, Series X",
 	  "ISIN": "IN0020210319",
 	  "issueDate": "March 8, 2022",
@@ -2506,7 +2505,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"10232": {
+	{ "token": "10232",
 	  "tranche": "2022-23, Series I",
 	  "ISIN": "IN0020220045",
 	  "issueDate": "June 28, 2022",
@@ -2526,7 +2525,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"11192": {
+	{ "token": "11192",
 	  "tranche": "2022-23, Series II",
 	  "ISIN": "IN0020220078",
 	  "issueDate": "August 30, 2022",
@@ -2546,7 +2545,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"13642": {
+	{ "token": "13642",
 	  "tranche": "2022-23, Series III",
 	  "ISIN": "IN0020220110",
 	  "issueDate": "December 27, 2022",
@@ -2566,7 +2565,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"14598": {
+	{ "token": "14598",
 	  "tranche": "2022-23, Series IV",
 	  "ISIN": "IN0020220169",
 	  "issueDate": "March 14, 2023",
@@ -2586,7 +2585,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"17202": {
+	{ "token": "17202",
 	  "tranche": "2023-24, Series I",
 	  "ISIN": "IN0020230069",
 	  "issueDate": "June 27, 2023",
@@ -2606,7 +2605,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	},
-	"19456": {
+	{ "token": "19456",
 	  "tranche": "2023-24, Series II",
 	  "ISIN": "IN0020230093",
 	  "issueDate": "September 20, 2023",
@@ -2626,7 +2625,7 @@ const DEFAULT = {
 	  "discountToGoldPrice": 0,
 	  "remainingMaturity": 0
 	}
-   }
+]
 
 
 module.exports = { CONSTANTS, ACTION, MODE, EXCHANGES, DEFAULT };

@@ -1,48 +1,50 @@
 import { Component } from '@angular/core';
 import { WebsocketService } from './websocket.service';
+import { ColDef } from 'ag-grid-community'; // Column Definitions Interface
 
-interface socketResponse {
-  "tranche": string;
-  "ISIN": string;
-  "issueDate": string;
-  "exchange": string;
-  "symbol": string;
-  "issuePrice": number;
-  "interestRate": number;
-  "cashFlow": number;
-  "numberOfUnits": number;
-  "period": number;
-  "maturityDate": string;
-  "askPrice": number;
-  "calYield": number;
-  "fairValue": number;
-  "discountToFairValue": number;
-  "goldPrice": number;
-  "discountToGoldPrice": number;
-  "remainingMaturity": number;
-  "discountToGold": number;
-}
-interface MyObject {
-  [key: string]: socketResponse;
-}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  obj: MyObject = {}
-
+  defColDef = {
+    flex: 1
+  }
+  colDefs: ColDef[] = [
+		{field: "tranche"},
+		{field: "ISIN"},
+		{field: "issueDate"},
+		{field: "exchange"},
+		{field: "symbol"},
+		{field: "issuePrice"},
+		{field: "interestRate"},
+		{field: "cashFlow"},
+		{field: "numberOfUnits"},
+		{field: "period"},
+		{field: "maturityDate"},
+		{field: "askPrice"},
+		{field: "calYield"},
+		{field: "fairValue"},
+		{field: "discountToFairValue"},
+		{field: "goldPrice"},
+		{field: "discountToGoldPrice"},
+		{field: "remainingMaturity"}
+  ];
+  rowData: any = [3];
   constructor(private websocketService: WebsocketService) {
-    this.websocketService.onMessage().subscribe(
-      {
-        next: (message: MyObject) => {
-          this.obj = message
-          console.log(message);
-          
-        },
-        error: (err) => console.error('WebSocket error:'),
-        complete: () => console.log('WebSocket connection closed')
-      });
+    
+  }
+  ngOnInit() {
+    if (this.rowData.length > 0) {
+      this.websocketService.onMessage().subscribe(
+        {
+          next: (message) => {
+            this.rowData = message
+          },
+          error: (err) => console.error('WebSocket error:'),
+          complete: () => console.log('WebSocket connection closed')
+        });
+    }
   }
 }

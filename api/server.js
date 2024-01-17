@@ -3,7 +3,7 @@ let { SmartAPI } = require('smartapi-javascript');
 const WebSocketV2 = require('./websocket2');
 const { DEFAULT } = require('./config/constant')
 const WebSocket = require('ws');
-const wss = new WebSocket.Server({ port: 80 });
+const wss = new WebSocket.Server({ port: 3000 });
 const cron = require('node-cron');
 const { getGoldPrice } = require('./gold')
 const {getNextSixMonthsDates, filterDatesAfterToday, calculateXNPV} = require('./xnpv')
@@ -209,33 +209,37 @@ function receiveTick(data) {
     let { token, best_5_sell_data: [{ price }] } = data
     token = token.replace(/"/g, '')
     price = price / 100;
-    let calYield = (DEFAULT[token].issuePrice / price) * DEFAULT[token].interestRate
-    let discountToGold = (1 - (price / GOLDPRICE))
-    DEFAULT[token].askPrice = price
-    DEFAULT[token].calYield = calYield
-    DEFAULT[token].discountToGold = discountToGold
-    DEFAULT[token].discountToFairValue = 1 - (price/DEFAULT[token].fairValue)
-    DEFAULT[token].goldPrice = GOLDPRICE
-    if (clientSocket && clientSocket.readyState === WebSocket.OPEN) {
-        clientSocket.send(JSON.stringify(DEFAULT))
+    const objectToUpdate = DEFAULT.find(entry => entry.token === token);
+
+    if (objectToUpdate) {
+        let calYield = (objectToUpdate.issuePrice / price) * objectToUpdate.interestRate
+        let discountToGold = (1 - (price / GOLDPRICE))
+        objectToUpdate.askPrice = price
+        objectToUpdate.calYield = calYield
+        objectToUpdate.discountToGold = discountToGold
+        objectToUpdate.discountToFairValue = 1 - (price/objectToUpdate.fairValue)
+        objectToUpdate.goldPrice = GOLDPRICE
+        if (clientSocket && clientSocket.readyState === WebSocket.OPEN) {
+            clientSocket.send(JSON.stringify(DEFAULT))
+        }
     }
 }
 async function updateGoldValue() {
     GOLDPRICE = await getGoldPrice()
 }
 function updateXNPV() {
-    for (let key in DEFAULT) {
-        const startingDate = new Date(DEFAULT[key].issueDate);
+    DEFAULT.forEach((obj) => {
+        const startingDate = new Date(obj.issueDate);
         const numberOfDatesToGenerate = 16;
         const nextSixMonthsDates = getNextSixMonthsDates(startingDate, numberOfDatesToGenerate);
         const cashFlowDates = filterDatesAfterToday(nextSixMonthsDates);
         cashFlowDates.unshift(new Date())
         const discountRate = 0.07; // Replace with your desired discount rate
-        const cashFlows = Array(cashFlowDates.length).fill(DEFAULT[key].cashFlow,1,cashFlowDates.length);
+        const cashFlows = Array(cashFlowDates.length).fill(obj.cashFlow,1,cashFlowDates.length);
         cashFlows[0] = 0
         const xnpvResult = calculateXNPV(discountRate, cashFlows, cashFlowDates);
-        DEFAULT[key].fairValue = xnpvResult + GOLDPRICE
-    }
+        obj.fairValue = xnpvResult + GOLDPRICE
+    })
 }
 
 wss.on('connection', function connection(ws) {
