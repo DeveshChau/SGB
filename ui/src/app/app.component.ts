@@ -14,6 +14,7 @@ export class AppComponent {
   colDefs: ColDef[] = [
 		{field: "tranche"},
 		{field: "ISIN"},
+		{field: "askPrice", unSortIcon: true},
 		{field: "issueDate"},
 		{field: "exchange"},
 		{field: "symbol"},
@@ -23,7 +24,6 @@ export class AppComponent {
 		{field: "numberOfUnits"},
 		{field: "period"},
 		{field: "maturityDate"},
-		{field: "askPrice"},
 		{field: "calYield"},
 		{field: "fairValue"},
 		{field: "discountToFairValue"},

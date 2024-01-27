@@ -209,6 +209,7 @@ function receiveTick(data) {
     let { token, best_5_sell_data: [{ price }] } = data
     token = token.replace(/"/g, '')
     price = price / 100;
+    if (price === 0) return
     const objectToUpdate = DEFAULT.find(entry => entry.token === token);
 
     if (objectToUpdate) {
